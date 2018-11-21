@@ -36,7 +36,7 @@ public class GETMethodsTests {
 			header("Authorization", "{auth-token}").
 			
 		when().
-			get("/api/v1/").
+			get("{API}").
 			
 		then().
 		assertThat().
