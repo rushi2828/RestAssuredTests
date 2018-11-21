@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-11-21T11:44:10Z" name="Default suite" finished-at="2018-11-21T11:44:13Z" duration-ms="3162">
+    <groups>
+    </groups>
+    <test started-at="2018-11-21T11:44:10Z" name="Default test" finished-at="2018-11-21T11:44:13Z" duration-ms="3162">
+      <class name="SampleTestBDD.GETMethodsTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SampleTestBDD.GETMethodsTests@4961f6af]" started-at="2018-11-21T17:14:10Z" name="setUp" finished-at="2018-11-21T17:14:10Z" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getNewsfeedData()[pri:0, instance:SampleTestBDD.GETMethodsTests@4961f6af]" started-at="2018-11-21T17:14:10Z" name="getNewsfeedData" finished-at="2018-11-21T17:14:13Z" duration-ms="2776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNewsfeedData -->
+      </class> <!-- SampleTestBDD.GETMethodsTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
