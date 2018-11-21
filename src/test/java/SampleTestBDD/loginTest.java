@@ -20,7 +20,7 @@ public class loginTest {
 	@BeforeMethod
 	public void setUp() {
 		
-		RestAssured.baseURI = "https://devapi.healthpole.com";
+		RestAssured.baseURI = "{HOST}";
 		
 	}
 	
@@ -29,14 +29,14 @@ public class loginTest {
 	public void loginTest1 (){
 		
 		given().
-		param("email", "rushikesh.m@bootinfotech.com").
-		param("password", "test1234").
+		param("email", "r@gmail.com").
+		param("password", "test").
 		param("Content-Type", "application/json").
 
 
 	
 	when().
-	post("/api/v1/doctors/login").
+	post("{end points}").
 	
 	then().
 	assertThat().

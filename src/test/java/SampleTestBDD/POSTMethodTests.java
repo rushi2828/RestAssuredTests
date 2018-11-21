@@ -14,7 +14,7 @@ public class POSTMethodTests {
 	@BeforeMethod
 	public void setUp() {
 		
-		RestAssured.baseURI = "https://devapi.healthpole.com";
+		RestAssured.baseURI = "{HOST}";
 		
 	}
 	
@@ -23,7 +23,7 @@ public class POSTMethodTests {
 	public void cretePost() {
 		
 	given().
-		header("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.7XazkQhbiuDALP8c_WGjNFjQEjUlMq-LJWO3LxvhmiU").
+		header("Authorization", "{auth-token}").
 		body("{\n" + 
 				"	\"type\": \"POST\",\n" + 
 				"	\"title\": \"discussion B\",\n" + 
@@ -41,7 +41,7 @@ public class POSTMethodTests {
 				"}").
 		
 	when().
-	    post("/api/v1/doctors/feeds").andReturn().
+	    post("{API}").andReturn().
 	
 	then().
 	assertThat().
@@ -56,11 +56,11 @@ public class POSTMethodTests {
 		
 	given().
 	        
-	        header("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.7XazkQhbiuDALP8c_WGjNFjQEjUlMq-LJWO3LxvhmiU"). 
-	        body("{\"isLiked\":false,\"message\":{\"senderType\":0,\"text\":\"Hello\"}}"). 
+	        header("Authorization", "{auth-token}"). 
+	        body("{MESSAGE}"). 
 	        
 	when().
-	        post("/api/v1/doctors/feeds/4682/comments").
+	        post("{API}").
 	        
 	then().
 	        statusCode(200).

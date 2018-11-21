@@ -19,7 +19,7 @@ public class GETMethodsTests {
 	@BeforeMethod
 	public void setUp() {
 		
-		RestAssured.baseURI = "https://devapi.healthpole.com";
+		RestAssured.baseURI = "{HOST}";
 		
 	}
 	
@@ -30,13 +30,13 @@ public class GETMethodsTests {
 		
 		Response res =
 		given().
-			param("email", "rushikesh.m@bootinfotech.com").
-			param("password", "test1234").
+			param("email", "{EMAIL_ID}").
+			param("password", "{PASSWORD}").
 			queryParam("page ", 1).
-			header("Authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.7XazkQhbiuDALP8c_WGjNFjQEjUlMq-LJWO3LxvhmiU").
+			header("Authorization", "{auth-token}").
 			
 		when().
-			get("/api/v1/doctors/feeds").
+			get("/api/v1/").
 			
 		then().
 		assertThat().
